@@ -1,0 +1,37 @@
+﻿@model QDB.Models.QuoteModel
+
+@{
+    ViewBag.Title = "dQDB - Quote";
+}
+
+<h2>Quote</h2>
+@if (ViewData.ContainsKey("delete"))
+{
+<h3>@ViewData["delete"]</h3>
+}
+else
+{
+<script type="text/javascript">
+    function deleteRecord(recordId) {
+        // Perform delete
+        alert("about to delete");
+        var action = "/Quote/" + recordId;
+
+        var request = new Sys.Net.WebRequest();
+        request.set_httpVerb("DELETE");
+        request.set_url(action);
+        request.add_completed(deleteCompleted);
+        request.invoke();
+    }
+
+    function deleteCompleted() {
+        // Reload page
+        alert("done!");
+        //window.location.reload();
+    }
+</script>
+<div>
+    <p>#@Model.Id - <a href="JavaScript:void(0);" onclick="deleteRecord(@Model.Id)">delete</a></p>
+    <p>@MvcHtmlString.Create(QDB.StringHelper.Parse(Model.Quote))</p>
+</div>
+}

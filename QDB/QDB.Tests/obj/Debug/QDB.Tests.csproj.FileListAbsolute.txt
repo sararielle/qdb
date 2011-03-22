@@ -1,0 +1,8 @@
+c:\users\will\documents\visual studio 2010\Projects\QDB\QDB.Tests\bin\Debug\QDB.Tests.dll.config
+c:\users\will\documents\visual studio 2010\Projects\QDB\QDB.Tests\bin\Debug\QDB.Tests.dll
+c:\users\will\documents\visual studio 2010\Projects\QDB\QDB.Tests\bin\Debug\QDB.Tests.pdb
+c:\users\will\documents\visual studio 2010\Projects\QDB\QDB.Tests\bin\Debug\QDB.dll
+c:\users\will\documents\visual studio 2010\Projects\QDB\QDB.Tests\bin\Debug\QDB.pdb
+c:\users\will\documents\visual studio 2010\Projects\QDB\QDB.Tests\obj\Debug\ResolveAssemblyReference.cache
+c:\users\will\documents\visual studio 2010\Projects\QDB\QDB.Tests\obj\Debug\QDB.Tests.dll
+c:\users\will\documents\visual studio 2010\Projects\QDB\QDB.Tests\obj\Debug\QDB.Tests.pdb

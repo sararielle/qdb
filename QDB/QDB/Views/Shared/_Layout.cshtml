@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/MicrosoftAjax.js")" type="text/javascript"></script>
+    <!--
+    <META name="msapplication-task" content="name=Task 1;action-uri=http://host/Page1.html;icon-uri=http://host/icon1.ico"/>
+    <META name="msapplication-task" content="name=Task 2;action-uri=http://microsoft.com/Page2.html;icon-uri=http://host/icon2.ico"/>
+    -->
+</head>
+
+<body>
+    <div class="page">
+
+        <div id="header">
+            <div id="title">
+                <h1>@Html.ActionLink("<dQDB>","Index", "Home")</h1>
+            </div>
+
+            <div id="logindisplay">
+                @Html.Partial("_LogOnPartial")
+            </div>
+
+            <div id="menucontainer">
+                <!-- home | latest | browse | random | top | search | submit quote -->
+                <ul id="menu">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Latest", "Index", "Quotes")</li>
+                    <li>@Html.ActionLink("Browse", "Browse", "Quotes")</li>
+                    <li>@Html.ActionLink("Random", "Random", "Quotes")</li>
+                    <li>@Html.ActionLink("Top", "Top", "Quotes")</li>
+                    <li>@Html.ActionLink("Submit", "Submit", "Quote")</li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div id="main">
+            @RenderBody()
+        </div>
+
+        <div id="footer">
+            &copy; 2011, Will Johansson. Licensed under the Creative Commons License.
+        </div>
+    </div>
+</body>
+</html>

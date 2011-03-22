@@ -1,0 +1,22 @@
+﻿@model IEnumerable<QDB.Models.QuoteModel>
+
+@{
+    ViewBag.Title = "dQDB - Latest Quotes";
+}
+
+<h2>dQDB - Latest Quotes</h2>
+
+<table id="tblQuotes">
+@foreach (var item in Model) {
+    <tr>
+        <td>@Html.ActionLink("#" + item.Id.ToString(), "Index", "Quote", new { id=item.Id }, null)</td>
+        <td>date submitted: @item.DateSubmitted.ToLongDateString()</td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            @MvcHtmlString.Create(QDB.StringHelper.Parse(item.Quote))
+        </td>
+    </tr>
+}
+</table>
+<p>@Ajax.ActionLink("Next", "Index", "Quote", new { id = 5 }, new AjaxOptions { UpdateTargetId = "tblQuotes"})</p>
